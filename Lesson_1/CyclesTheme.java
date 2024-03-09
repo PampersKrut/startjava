@@ -64,17 +64,17 @@ public class CyclesTheme {
         System.out.println("\n4. Вывод чисел в несколько строк\n");
 
         int number1 = 1;
-        int number2 = 123;
+        int number2 = 24;
         int counter = 0;
 
         for (int i = number1; i < number2; i++) {
-            System.out.printf("%5d", i);
+            System.out.printf("%5d", i); //Вывод числа
             counter++;
-            if (counter % 5 == 0 ) {
+            if (counter % 5 == 0 ) {// если 5 символов, начинаем с новой строки
                 System.out.println();
-            } else if (i == number2 - 1 && counter % 10 <= 5) {
+            } else if (i == number2 - 1 && counter % 10 <= 5) { //Добавление нулей если остаток <= 5
                 System.out.print("    0".repeat(5 - counter % 10));
-            } else if (i == number2 - 1 && counter % 10 > 5 && counter % 10 <= 9) {
+            } else if (i == number2 - 1 && counter % 10 > 5 && counter % 10 <= 9) { //Добавление нулей если остаток от 5 до 10
                 System.out.print("    0".repeat(10 - counter % 10 ));
             }
 
