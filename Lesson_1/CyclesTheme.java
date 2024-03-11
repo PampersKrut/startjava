@@ -77,7 +77,55 @@ public class CyclesTheme {
             } else if (i == number2 - 1 && counter % 10 > 5 && counter % 10 <= 9) { //Добавление нулей если остаток от 5 до 10
                 System.out.print("    0".repeat(10 - counter % 10 ));
             }
-
         }
+
+        System.out.println("\n5. Проверка количества двоек числа на четность/нечетность\n");
+
+        int numer = 3242592;
+        int chetnSum = 0;
+        while (numer > 0) {
+            if (numer % 10 == 2) //Проверка крайнего
+                chetnSum++;
+            numer /= 10;
+        }
+        String parity = (chetnSum % 2 == 0) ? "четное" : "нечетное";
+        System.out.println("В 3242592 " + parity + " количество двоек - " + chetnSum);
+
+        System.out.println("\n6. Отображение геометрических фигур\n");
+
+        int f = 9;
+        int f2 = 5;
+        for (int j = 0; j < f2; j++) {
+            for (int i = 0; i < f  ; i++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+        System.out.println("\n");
+
+        int k = 5;
+        while (k > 0) {
+            for (int j = 0; j < k; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+            k--;
+        }
+        System.out.println("\n");
+
+        int m = 5;
+        int rep = 0;
+        String str = "$";
+        do {
+            System.out.println(str.repeat(rep + 1));
+            rep++;
+        } while (rep < (m + 1) / 2 );
+        do {
+            if (rep == 0)
+                break;
+            rep--;
+            System.out.println(str.repeat(rep));
+
+        }while (rep >= 0);
     }
 }
