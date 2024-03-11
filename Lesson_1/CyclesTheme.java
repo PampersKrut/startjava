@@ -95,7 +95,7 @@ public class CyclesTheme {
 
         int f = 9;
         int f2 = 5;
-        for (int j = 0; j < f2; j++) {
+        for (int j = 0; j < f2; j++) { //цикл в цикле выводит 9 элементов '*' для каждой строчки
             for (int i = 0; i < f  ; i++) {
                 System.out.print("*");
             }
@@ -105,11 +105,8 @@ public class CyclesTheme {
 
         int k = 5;
         while (k > 0) {
-            for (int j = 0; j < k; j++) {
-                System.out.print("#");
-            }
-            System.out.println();
-            k--;
+            System.out.println("#".repeat(k)); //цикл повторяет элемент '#' k раз
+            k--;// и с каждый последующем шагом цикла уменьшается на 1
         }
         System.out.println("\n");
 
@@ -117,14 +114,14 @@ public class CyclesTheme {
         int rep = 0;
         String str = "$";
         do {
-            System.out.println(str.repeat(rep + 1));
+            System.out.println(str.repeat(rep + 1)); // первый цикл записывает '$' по возрастающий до половины m
             rep++;
         } while (rep < (m + 1) / 2 );
         do {
-            if (rep == 0)
+            if (rep == 0) //чтобы не выходить за границы условия while добавляем условие
                 break;
             rep--;
-            System.out.println(str.repeat(rep));
+            System.out.println(str.repeat(rep));// и выводим в обратном порядке
 
         }while (rep >= 0);
     }
